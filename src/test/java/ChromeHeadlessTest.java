@@ -9,6 +9,7 @@ public class ChromeHeadlessTest {
     public static void main(String[] args){
         String chromeDriverPath = "D:\\Drivers\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        //Add Desired Capabilities for Chrome Headless browser
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable--gpu", "--window-size=1920,1200", "--ignore-certificate-errors", "--silent");
         WebDriver driver = new ChromeDriver(options);
